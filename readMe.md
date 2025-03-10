@@ -1,19 +1,19 @@
 # deploying on Ganache using truffle
 
 ## for new project use
-    - `truffle init` command
+    - `bash truffle init` command
 
 ## solidity version to use truffle
     - for best result solidity version ">=0.5.0 < 0.9.0"
     - change the solidity version in truffle-config.js to "^0.5.0"
 
 ## to compile
-    - use `truffle compile`
+    - use `bash truffle compile`
 
 ## to compile and migrate in one command after migration files have been created
     - in order to deploy on ganache, make sure **development** is uncommented in truffle-config
-    - use `truffle migrate`
-    - use this command if there are changes in SC which truffle did not notice `truffle migrate --reset`
+    - use `bash truffle migrate`
+    - use this command if there are changes in SC which truffle did not notice `bash truffle migrate --reset`
     - make sure the contract name is provided as an argument to artifacts.require() rather than the file name with extension 
     e.g. if file name is "Vote.sol" and contract name is "Voter", then "Voter" is the argument that should be provided. **TO AVOID THIS OVER ALL, MAKE THE FILE AND CONTRACT NAME SAME.**
     - if you get error "... "VoterContract" hit an invalid opcode while deploying...." make sure the solidity version and 
@@ -43,8 +43,10 @@
     ```
     - replace ** "MNEMONIC"** with "private_key". 
     - use this command to install Dotenv 
-        ```npm install dotenv```
+        ```bash npm install dotenv```
     - fill dotenv fil with the following:
         ```private_key = <private key>
         PROJECT_ID = <API key from alchemy/ or any provider>```
-    
+    - use this command to intall HDwallet ```bash npm install @truffle/hdwallet-provider```
+    - use this command to deploy on sepolia ```bash truffle migrate --network sepolia --reset```
+    - contract address - 0x519dB7428DB6985f3FE2F798a3C2B9b9B6a006e8
