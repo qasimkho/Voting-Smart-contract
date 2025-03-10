@@ -45,8 +45,6 @@
     - use this command to install Dotenv 
         ```npm install dotenv```
     - fill dotenv fil with the following:
-        ```
-        private_key = <private key>
-        PROJECT_ID = <API key from alchemy/ or any provider>
-        ```
+        ```private_key = <private key>
+        PROJECT_ID = <API key from alchemy/ or any provider>```
     
